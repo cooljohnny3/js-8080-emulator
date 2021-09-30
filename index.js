@@ -1,4 +1,4 @@
-import Emulator from "./emulator.js";
+import Emulator from "./js/emulator.js";
 
 let emulator = new Emulator();
 document.getElementById('start-button').addEventListener('click', () => emulator.run());
