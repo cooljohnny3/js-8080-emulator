@@ -1,0 +1,86 @@
+body {
+    margin: 5vh 5vw;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+#container {
+    visibility: hidden;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    max-height: 50vh;
+}
+
+#video-display {
+    height: 256px;
+    width: 224px;
+}
+
+#left-side {
+    text-align: center;
+    max-width: 224px;
+}
+
+#right-side {
+    flex-grow: 1;
+}
+
+.main-content {
+    display: flex;
+    gap: 50px;
+    
+}
+
+#code-input {
+    flex-grow: 1;
+    resize: none;
+}
+
+#state-display {
+    display: flex;
+    gap: 50px;
+}
+
+.controls {
+    margin: 10px 0 10px 0;
+}
+
+#bottom {
+    visibility: hidden;
+}
+
+#debug-buttons {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#memory-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#memory {
+    font-family: monospace;
+    padding: 0 7px;
+    font-size: 1.2em;
+    border: solid black 1px;
+    overflow-y: scroll;
+    max-height: 45vh;
+}
+
+.pc-highlight {
+    background-color: #FFFF00;
+}
+
+.search-highlight {
+    background-color: #FF0000;
+}

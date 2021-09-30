@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS 8080 Emulator</title>
+</head>
+<body>
+    <div id="loading-div">
+        <h2>LOADING...</h2>
+    </div>
+    <div id="container">
+        <div id="top">
+            <div id="left-side">
+                <canvas id="video-display"></canvas>
+                <p>Video display is 256x224. </p>
+                <p>Each pixel is mapped to a bit in the range 0x2400 - 0x3FFF</p>
+            </div>
+            <div id="right-side">
+                <div class="main-content">
+                    <textarea id="code-input"></textarea>
+                    <div id="state-display">
+                        <div id="registers">
+                            <h3>Registers</h3>
+                        </div>
+                        <div id="flags">
+                            <h3>Flags</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="start-button">Run</button>
+                    <button id="stop-button">Stop</button>
+                    <button id="reset-button">Reset</button>
+                    <label for="delay-input">Delay</label>
+                    <input type="text" name="delay-input" id="delay-input">
+                    <button id="update-delay-button">Update</button>
+                    <div id="debug-buttons">
+                        <label for="debug-video">Video:</label>
+                        <input type="checkbox" name="debug-video" id="debug-video" checked>
+                        <label for="debug-registers">Registers:</label>
+                        <input type="checkbox" name="debug-registers" id="debug-registers" checked>
+                        <label for="debug-memory">Memory:</label>
+                        <input type="checkbox" name="debug-memory" id="debug-memory">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="memory-header">
+                <h3>Memory</h3>
+                <div id="memory-search">
+                    <label for="search-input">Address:</label>
+                    <input type="text" name="search-input" id="memory-search-input">
+                    <button id="search-button">Search</button>
+                    <button id="clear-button">Clear</button>
+                </div>
+            </div>
+            <div id="memory"></div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
